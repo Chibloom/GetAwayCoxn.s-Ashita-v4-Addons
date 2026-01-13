@@ -1188,15 +1188,15 @@ function manager.CountAFGear()
                     interface.data.progress.gear.afneed[3][y][8] = interface.data.progress.gear.afneed[3][y][8] + 1;
                 end
                 if (y == 1) then
-                    cards[x] = cards[x] + 8;
+                    cards[x] = cards[x] + 4;
                 elseif (y == 2) then
-                    cards[x] = cards[x] + 10;
+                    cards[x] = cards[x] + 5;
                 elseif (y == 3) then
-                    cards[x] = cards[x] + 7;
+                    cards[x] = cards[x] + 3;
                 elseif (y == 4) then
-                    cards[x] = cards[x] + 9;
+                    cards[x] = cards[x] + 4;
                 elseif (y == 5) then
-                    cards[x] = cards[x] + 6;
+                    cards[x] = cards[x] + 3;
                 end
             end
             if interface.data.progress.gear.af[x][y][1] <= 5 then
@@ -1233,15 +1233,15 @@ function manager.CountAFGear()
                     interface.data.progress.gear.afneed[4][y][12] = interface.data.progress.gear.afneed[4][y][12] + 1;
                 end
                 if (y == 1) then
-                    cards[x] = cards[x] + 40;
+                    cards[x] = cards[x] + 12;
                 elseif (y == 2) then
-                    cards[x] = cards[x] + 50;
+                    cards[x] = cards[x] + 15;
                 elseif (y == 3) then
-                    cards[x] = cards[x] + 35;
+                    cards[x] = cards[x] + 9;
                 elseif (y == 4) then
-                    cards[x] = cards[x] + 45;
+                    cards[x] = cards[x] + 12;
                 elseif (y == 5) then
-                    cards[x] = cards[x] + 30;
+                    cards[x] = cards[x] + 9;
                 end
             end
         end
@@ -1433,11 +1433,11 @@ function manager.DisplayAFGearNeed()
     imgui.BeginTable('1192slot', 6, ImGuiTableFlags_Borders);
         imgui.TableNextRow(ImGuiTableRowFlags_Headers);imgui.TableNextColumn();
         imgui.TextColored(interface.colors.header, 'Lv119+2');imgui.TableNextColumn();
-        imgui.TextColored(interface.colors.header, 'Head (8/40 cards)');imgui.TableNextColumn();
-        imgui.TextColored(interface.colors.header, 'Body (10/50 cards)');imgui.TableNextColumn();
-        imgui.TextColored(interface.colors.header, 'Hands (7/35 cards)');imgui.TableNextColumn();
-        imgui.TextColored(interface.colors.header, 'Legs (9/45 cards)');imgui.TableNextColumn();
-        imgui.TextColored(interface.colors.header, 'Feet (6/30 cards)');imgui.TableNextColumn();
+        imgui.TextColored(interface.colors.header, 'Head (4/12 cards)');imgui.TableNextColumn();
+        imgui.TextColored(interface.colors.header, 'Body (5/15 cards)');imgui.TableNextColumn();
+        imgui.TextColored(interface.colors.header, 'Hands (3/9 cards)');imgui.TableNextColumn();
+        imgui.TextColored(interface.colors.header, 'Legs (4/12 cards)');imgui.TableNextColumn();
+        imgui.TextColored(interface.colors.header, 'Feet (3/9 cards)');imgui.TableNextColumn();
         imgui.Text('Slot');imgui.TableNextColumn();
         imgui.Text('Emp Artho Shell');imgui.TableNextColumn();
         imgui.Text('Joyous Moss');imgui.TableNextColumn();
@@ -1691,7 +1691,7 @@ function manager.CountRelicGear()
             end
             if interface.data.progress.gear.relic[job][slot][1] <= 5 then
                 interface.data.progress.gear.relicneed[5][job][slot][1] = interface.data.progress.gear.relicneed[5][job][slot][1] + 2;
-                interface.data.progress.gear.relicneed[4][slot][1] = interface.data.progress.gear.relicneed[4][slot][1] + 3;
+                interface.data.progress.gear.relicneed[4][slot][1] = interface.data.progress.gear.relicneed[4][slot][1] + 1;
                 if (job == 1) or (job == 9) or (job == 11) then
                     interface.data.progress.gear.relicneed[4][slot][2] = interface.data.progress.gear.relicneed[4][slot][2] + 1;
                 elseif (job == 2) or (job == 6) or (job == 19) then
@@ -1709,9 +1709,9 @@ function manager.CountRelicGear()
                 end
             end
             if interface.data.progress.gear.relic[job][slot][1] <= 6 then
-                interface.data.progress.gear.relicneed[5][job][slot][1] = interface.data.progress.gear.relicneed[5][job][slot][1] + 3;
-                interface.data.progress.gear.relicneed[5][job][slot][2] = interface.data.progress.gear.relicneed[5][job][slot][2] + 3;
-                interface.data.progress.gear.relicneed[5][job][slot][3] = interface.data.progress.gear.relicneed[5][job][slot][3] + 3;
+                interface.data.progress.gear.relicneed[5][job][slot][1] = interface.data.progress.gear.relicneed[5][job][slot][1] + 2;
+                interface.data.progress.gear.relicneed[5][job][slot][2] = interface.data.progress.gear.relicneed[5][job][slot][2] + 2;
+                interface.data.progress.gear.relicneed[5][job][slot][3] = interface.data.progress.gear.relicneed[5][job][slot][3] + 2;
             end
         end
     end
@@ -1903,11 +1903,11 @@ function manager.DisplayRelicGearNeed()
     imgui.BeginTable('1192slot', 6, ImGuiTableFlags_Borders);
         imgui.TableNextRow(ImGuiTableRowFlags_Headers);imgui.TableNextColumn();
         imgui.TextColored(interface.colors.header, 'Lv119+2');imgui.TableNextColumn();
-        imgui.TextColored(interface.colors.header, 'Head (3 ea.)');imgui.TableNextColumn();
-        imgui.TextColored(interface.colors.header, 'Body (3 ea.)');imgui.TableNextColumn();
-        imgui.TextColored(interface.colors.header, 'Hands (3 ea.)');imgui.TableNextColumn();
-        imgui.TextColored(interface.colors.header, 'Legs (3 ea.)');imgui.TableNextColumn();
-        imgui.TextColored(interface.colors.header, 'Feet (3 ea.)');imgui.TableNextColumn();
+        imgui.TextColored(interface.colors.header, 'Head');imgui.TableNextColumn();
+        imgui.TextColored(interface.colors.header, 'Body');imgui.TableNextColumn();
+        imgui.TextColored(interface.colors.header, 'Hands');imgui.TableNextColumn();
+        imgui.TextColored(interface.colors.header, 'Legs');imgui.TableNextColumn();
+        imgui.TextColored(interface.colors.header, 'Feet');imgui.TableNextColumn();
         imgui.Text('Slot');imgui.TableNextColumn();
         imgui.Text('Gabbrath Horn');imgui.TableNextColumn();
         imgui.Text('Yggdreant Bole');imgui.TableNextColumn();
@@ -1957,11 +1957,11 @@ function manager.DisplayRelicGearNeed()
     imgui.BeginTable('1193slot', 6, ImGuiTableFlags_Borders);
         imgui.TableNextRow(ImGuiTableRowFlags_Headers);imgui.TableNextColumn();
         imgui.TextColored(interface.colors.header, 'Lv119+3');imgui.TableNextColumn();
-        imgui.TextColored(interface.colors.header, 'Head (3 ea.)');imgui.TableNextColumn();
-        imgui.TextColored(interface.colors.header, 'Body (3 ea.)');imgui.TableNextColumn();
-        imgui.TextColored(interface.colors.header, 'Hands (3 ea.)');imgui.TableNextColumn();
-        imgui.TextColored(interface.colors.header, 'Legs (3 ea.)');imgui.TableNextColumn();
-        imgui.TextColored(interface.colors.header, 'Feet (3 ea.)');imgui.TableNextColumn();
+        imgui.TextColored(interface.colors.header, 'Head (2 ea.)');imgui.TableNextColumn();
+        imgui.TextColored(interface.colors.header, 'Body (2 ea.)');imgui.TableNextColumn();
+        imgui.TextColored(interface.colors.header, 'Hands (2 ea.)');imgui.TableNextColumn();
+        imgui.TextColored(interface.colors.header, 'Legs (2 ea.)');imgui.TableNextColumn();
+        imgui.TextColored(interface.colors.header, 'Feet (2 ea.)');imgui.TableNextColumn();
         imgui.Text('Slot');imgui.TableNextColumn();
         imgui.Text("Defiant Scarf");imgui.TableNextColumn();
         imgui.Text("Hades' Claw");imgui.TableNextColumn();
@@ -2123,7 +2123,7 @@ function manager.CountEmpyGearInv(items)
     items[2][1][4] = 0 - interface.data.inventory['Itzpapa. Scale'];
     items[2][1][5] = 0 - interface.data.inventory['Orthrus\'s Claw'];
     items[2][1][6] = 0 - interface.data.inventory['Glavoid Shell'];
-    items[2][1][7] = 0 - interface.data.inventory['Cirein-croin\'s Lantern'];
+    items[2][1][7] = 0 - interface.data.inventory['Cirein. Lantern'];
     items[2][1][8] = 0 - interface.data.inventory['Alfard\'s Fang'];
     items[2][1][9] = 0 - interface.data.inventory['Kukulkan\'s Fang'];
     items[2][1][10] = 0 - interface.data.inventory['Carabosse\'s Gem'];
